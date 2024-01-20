@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Expense Tracker</title>
+	<style>
+		.contain {
+        display: flex;
+      }
+      
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: grey;
+        color: #fff;
+        padding: 20px;
+      }
+      
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .sidebar li {
+        margin: 10px 0;
+        padding: 10px;
+        height: 60px;
+        border: 1px solid #f0d98f;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 25px;
+      }
+      
+      .content {
+        flex: 1;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 36px;
+        margin-top: 50px;
+      }
+
+      .scroll_vert2 ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .logo{
+        height:150px;
+        width:150px;
+        margin-left:75px;
+      }
+      .scroll_vert2 li {
+        margin: 10px 0;
+        /* padding: 10px; */
+        height: 70px;
+        font-size: 40px;
+        border: 5px solid #f0d98f;
+        border-radius: 25px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .scroll_vert2 {
+        background-color: rgba(51, 51, 51, 0.5);
+        height: 100%;
+        width: 74%;
+        border-radius: 40px;
+        overflow-x:visible;
+        overflow-y: scroll;
+        margin-left: 20%;
+        }
+        .scroll_vert2::-webkit-scrollbar {
+          display: none;
+        }
+        .scroll_vert2 {
+          -ms-overflow-style: none;  
+          scrollbar-width: none;
+        }
+        .img{
+            height:600px;
+            width:600px;
+            float:center;
+            margin-left:380px;
+            border:3 px solid black;
+        }
+        a {
+            display: block;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 25px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #006B8F;
+        } 
+        footer{
+            background-color:gray;
+            color:black;
+            font-weight:bold;
+            margin-bottom:0;
+            position:relative;
+            bottom:0;
+            left:0;
+            margin-top:100px;
+            margin-left:350px;
+            margin-right: 100px;
+            border-radius:20px;
+            right:0;
+            z-index: 1;
+            text-align:center;
+            }
+         .h1 {
+            text-align: center;
+            margin-top: 100px;
+            color: #444444;
+        }/*
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        li {
+            margin: 0 10px;
+        }
+        
+        a {
+            display: block;
+            padding: 10px;
+            background-color: #008CBA;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .img{
+            height:400px;
+            width:400px;
+            float:center;
+            margin-left:720px;
+            border:3 px solid black;
+        }
+        a:hover {
+            background-color: #006B8F;
+        } */
+       
+    </style>
+</head>
+<body background="https://img.freepik.com/free-vector/abstract-geometric-wireframe-background_52683-59421.jpg" style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+
+    <body style="background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+        <div class="contain">
+          <div class="sidebar">
+            <div style="background-color:lightseagreen;border-radius:20px;"><h1 style="font-size:38px;">BILL SPLITTER <span style="color:yellow">PRO</span></h1></div>
+            
+            <img class="logo" src="https://is1-ssl.mzstatic.com/image/thumb/Purple49/v4/bf/89/b8/bf89b8dc-3bdd-3c59-3565-bc436b1c965a/source/512x512bb.jpg">
+            <br>
+            <br>
+            <br>
+            <hr>
+            <br>
+            <h2 style="text-align: center;">GROUP PAGE</h2>
+            <p style="font-size:20px;"> Welcome to <span style="color:yellow">{{member_name}}</span><br>
+                You can proceed onto the group transactions, balance from this page. You can also add a new expense in the group by clicking on the desired button.
+            </p>
+            <br>
+            <hr>
+            <br>
+            <br><br>
+            <a href="http://127.0.0.1:5000/">Home</a>
+        </div>
+          <div class="content">
+            <div class="container_2">
+              <div class="scroll_vert2">
+  
+    
+                <h1 style="text-align:center;font-size:60px;color:yellow">{{member_name}}</h1>
+    <img class="img" src="https://cdn3.iconfinder.com/data/icons/communication-media-malibu-vol-1/128/group-chat-1024.png">
+
+	<div>
+		<ul>
+			<li><a href="/addexpense?member_name={{ member_name }}">ADD EXPENSE</a></li>
+			<li><a href="/balance?table_name={{ member_name }}">BALANCE</a></li>
+			<li><a href="/transaction?table_name={{ member_name }}">TRANSACTION</a></li>
+		</ul>
+        <br>
+        <br>
+	</div>
+</div>
+
+</div>
+<div><footer>
+    <p>Created by Gopendra Singh and Annamalai Senthil and Yashaswini Duggaraju</p>
+    <p>Contact us: gopendra.singh@students.iiit.ac.in | annamalai.senthil@students.iiit.ac.in | yashaswini.duggaraju@students.iiit.ac.in </p>
+    <p>Copyright &copy; 2023 My Website.
+    All rights reserved.</p>
+  </footer></div>
+</div>
+
+
+</body>
+</html>
+    
